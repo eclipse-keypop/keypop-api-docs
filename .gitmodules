@@ -1,0 +1,4 @@
+[submodule "keypop-calypso-crypto-symmetric-java-api"]
+	path = keypop-calypso-crypto-symmetric-java-api
+	url = https://github.com/eclipse-keypop/keypop-calypso-crypto-symmetric-java-api.git
+	branch = gh-pages
