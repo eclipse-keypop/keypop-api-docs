@@ -2,28 +2,54 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Central repository for API documentation of all **Eclipse Keypop** libraries, including both **Java** (Javadoc) and 
+Central repository for API documentation of all **Eclipse Keypop** libraries, including both **Java** (Javadoc) and
 **C++** (Doxygen) references.
 
-## Overview
+## Repository Structure
 
-This repository aggregates documentation from all Keypop libraries using Git submodules, pointing to the `gh-pages`
-branches of individual library repositories. The documentation is automatically published using GitHub Pages with
-Jekyll.
+This repository uses two main branches:
+- `main`: Contains the repository configuration and workflows
+- `gh-pages`: Contains the actual documentation and Jekyll configuration
 
 ## Managing Documentation Sources
+
+### Initial Setup
+
+To set up the documentation branch:
+
+```bash
+# Create and checkout a new orphan branch
+git checkout --orphan gh-pages
+
+# Remove everything from the working directory
+git rm -rf .
+
+# Add Jekyll configuration and templates
+# (Copy _config.yml, index.md, default.html from the previous setup)
+
+# Add and commit these files
+git add .
+git commit -m "Initial gh-pages setup"
+
+# Push the new branch
+git push origin gh-pages
+```
 
 ### Adding a New Library Documentation
 
 To add documentation for a new library:
 
 ```bash
+# Switch to gh-pages branch
+git checkout gh-pages
+
 # Add the submodule pointing to the gh-pages branch
 git submodule add -b gh-pages https://github.com/eclipse-keypop/[library-name].git [library-name]
 
 # Commit the changes
 git add .
 git commit -m "feat: add documentation for [library-name]"
+git push origin gh-pages
 ```
 
 ### Removing a Library Documentation
@@ -31,6 +57,9 @@ git commit -m "feat: add documentation for [library-name]"
 To remove documentation for a library:
 
 ```bash
+# Switch to gh-pages branch
+git checkout gh-pages
+
 # Remove the submodule
 git submodule deinit -f [library-name]
 rm -rf .git/modules/[library-name]
@@ -38,13 +67,14 @@ git rm -f [library-name]
 
 # Commit the changes
 git commit -m "feat: remove documentation for [library-name]"
+git push origin gh-pages
 ```
 
 ## Automatic Updates
 
 This repository includes a GitHub Action that automatically updates all submodules to their latest commits. The action:
 
-- Runs on manual trigger, repository dispatch event, or push to main
+- Runs on manual trigger, repository dispatch event, or push to gh-pages
 - Updates all submodules recursively
 - Commits and pushes changes if updates are detected
 - Uses a dedicated bot account for commits

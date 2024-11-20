@@ -6,7 +6,7 @@ on:
     types: [update-submodules]
   push:
     branches:
-      - main
+      - gh-pages
 
 concurrency:
   group: ${{ github.workflow }}
@@ -22,6 +22,7 @@ jobs:
       - name: Checkout the repository
         uses: actions/checkout@v4
         with:
+          ref: gh-pages
           submodules: recursive
           fetch-depth: 0
 
@@ -52,6 +53,6 @@ jobs:
       - name: Push changes if any
         if: env.changes_detected == 'true'
         run: |
-          git push origin HEAD:main
+          git push origin HEAD:gh-pages
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
