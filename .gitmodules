@@ -22,3 +22,7 @@
 	path = keypop-calypso-crypto-asymmetric-java-api
 	url = https://github.com/eclipse-keypop/keypop-calypso-crypto-asymmetric-java-api.git
 	branch = gh-pages
+[submodule "keypop-reader-cpp-api"]
+	path = keypop-reader-cpp-api
+	url = https://github.com/eclipse-keypop/keypop-reader-cpp-api.git
+	branch = gh-pages
