@@ -57,7 +57,7 @@ This repository includes a GitHub Action that automatically updates all submodul
 - Commits and pushes changes if updates are detected
 - Uses a dedicated bot account for commits
 
-You can view the action workflow in `.github/workflows/update-submodules.yml`.
+You can view the action workflow in [`/.github/workflows/update-submodules.yml`](https://github.com/eclipse-keypop/keypop-api-doc/blob/main/.github/workflows/update-submodules.yml).
 
 ## Contributing
 
