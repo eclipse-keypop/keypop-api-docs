@@ -9,31 +9,9 @@ Central repository for API documentation of all **Eclipse Keypop** libraries, in
 
 This repository uses two main branches:
 - `main`: Contains the repository configuration and workflows
-- `gh-pages`: Contains the actual documentation and Jekyll configuration
+- `gh-pages`: Contains the actual documentation and Jekyll configuration, published at [https://docs.keypop.org/](https://docs.keypop.org/)
 
 ## Managing Documentation Sources
-
-### Initial Setup
-
-To set up the documentation branch:
-
-```bash
-# Create and checkout a new orphan branch
-git checkout --orphan gh-pages
-
-# Remove everything from the working directory
-git rm -rf .
-
-# Add Jekyll configuration and templates
-# (Copy _config.yml, index.md, default.html from the previous setup)
-
-# Add and commit these files
-git add .
-git commit -m "Initial gh-pages setup"
-
-# Push the new branch
-git push origin gh-pages
-```
 
 ### Adding a New Library Documentation
 
