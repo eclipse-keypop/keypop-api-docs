@@ -2,11 +2,14 @@
 
 [![License](https://img.shields.io/badge/License-EPL_2.0-blue.svg)](https://www.eclipse.org/legal/epl-2.0/)
 
-Central repository for API documentation of all Eclipse Keypop libraries, including both Java (Javadoc) and C++ (Doxygen) references.
+Central repository for API documentation of all **Eclipse Keypop** libraries, including both **Java** (Javadoc) and 
+**C++** (Doxygen) references.
 
 ## Overview
 
-This repository aggregates documentation from all Keypop libraries using Git submodules, pointing to the `gh-pages` branches of individual library repositories. The documentation is automatically published using GitHub Pages with Jekyll.
+This repository aggregates documentation from all Keypop libraries using Git submodules, pointing to the `gh-pages`
+branches of individual library repositories. The documentation is automatically published using GitHub Pages with
+Jekyll.
 
 ## Managing Documentation Sources
 
@@ -16,7 +19,7 @@ To add documentation for a new library:
 
 ```bash
 # Add the submodule pointing to the gh-pages branch
-git submodule add -b gh-pages https://github.com/eclipse/keypop-[library-name].git [library-name]
+git submodule add -b gh-pages https://github.com/eclipse-keypop/[library-name].git [library-name]
 
 # Commit the changes
 git add .
