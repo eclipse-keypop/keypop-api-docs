@@ -1,48 +1,48 @@
 [submodule "keypop-calypso-crypto-symmetric-java-api"]
 	path = keypop-calypso-crypto-symmetric-java-api
 	url = https://github.com/eclipse-keypop/keypop-calypso-crypto-symmetric-java-api.git
-	branch = gh-pages
+	branch = doc
 [submodule "keypop-calypso-card-java-api"]
 	path = keypop-calypso-card-java-api
 	url = https://github.com/eclipse-keypop/keypop-calypso-card-java-api.git
-	branch = gh-pages
+	branch = doc
 [submodule "keypop-card-java-api"]
 	path = keypop-card-java-api
 	url = https://github.com/eclipse-keypop/keypop-card-java-api.git
-	branch = gh-pages
+	branch = doc
 [submodule "keypop-calypso-crypto-legacysam-java-api"]
 	path = keypop-calypso-crypto-legacysam-java-api
 	url = https://github.com/eclipse-keypop/keypop-calypso-crypto-legacysam-java-api.git
-	branch = gh-pages
+	branch = doc
 [submodule "keypop-reader-java-api"]
 	path = keypop-reader-java-api
 	url = https://github.com/eclipse-keypop/keypop-reader-java-api.git
-	branch = gh-pages
+	branch = doc
 [submodule "keypop-calypso-crypto-asymmetric-java-api"]
 	path = keypop-calypso-crypto-asymmetric-java-api
 	url = https://github.com/eclipse-keypop/keypop-calypso-crypto-asymmetric-java-api.git
-	branch = gh-pages
+	branch = doc
 [submodule "keypop-reader-cpp-api"]
 	path = keypop-reader-cpp-api
 	url = https://github.com/eclipse-keypop/keypop-reader-cpp-api.git
-	branch = gh-pages
+	branch = doc
 [submodule "keypop-card-cpp-api"]
 	path = keypop-card-cpp-api
 	url = https://github.com/eclipse-keypop/keypop-card-cpp-api.git
-	branch = gh-pages
+	branch = doc
 [submodule "keypop-calypso-card-cpp-api"]
 	path = keypop-calypso-card-cpp-api
 	url = https://github.com/eclipse-keypop/keypop-calypso-card-cpp-api.git
-	branch = gh-pages
+	branch = doc
 [submodule "keypop-calypso-crypto-legacysam-cpp-api"]
 	path = keypop-calypso-crypto-legacysam-cpp-api
 	url = https://github.com/eclipse-keypop/keypop-calypso-crypto-legacysam-cpp-api.git
-	branch = gh-pages
+	branch = doc
 [submodule "keypop-calypso-crypto-symmetric-cpp-api"]
 	path = keypop-calypso-crypto-symmetric-cpp-api
 	url = https://github.com/eclipse-keypop/keypop-calypso-crypto-symmetric-cpp-api.git
-	branch = gh-pages
+	branch = doc
 [submodule "keypop-calypso-crypto-asymmetric-cpp-api"]
 	path = keypop-calypso-crypto-asymmetric-cpp-api
 	url = https://github.com/eclipse-keypop/keypop-calypso-crypto-asymmetric-cpp-api.git
-	branch = gh-pages
+	branch = doc
