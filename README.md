@@ -21,8 +21,8 @@ To add documentation for a new library:
 # Switch to gh-pages branch
 git checkout gh-pages
 
-# Add the submodule pointing to the gh-pages branch
-git submodule add -b gh-pages https://github.com/eclipse-keypop/[library-name].git [library-name]
+# Add the submodule pointing to the doc branch
+git submodule add -b doc https://github.com/eclipse-keypop/[library-name].git [library-name]
 
 # Commit the changes
 git add .
