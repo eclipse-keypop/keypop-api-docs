@@ -46,3 +46,7 @@
 	path = keypop-calypso-crypto-asymmetric-cpp-api
 	url = https://github.com/eclipse-keypop/keypop-calypso-crypto-asymmetric-cpp-api.git
 	branch = doc
+[submodule "keypop-storagecard-java-api"]
+	path = keypop-storagecard-java-api
+	url = https://github.com/eclipse-keypop/keypop-storagecard-java-api
+	branch = doc
