@@ -6,7 +6,7 @@ on:
     types: [update-submodules]
   push:
     branches:
-      - gh-pages
+      - gh-pages-source
 
 concurrency:
   group: ${{ github.workflow }}
@@ -18,41 +18,33 @@ permissions:
 jobs:
   update-submodules:
     runs-on: ubuntu-latest
+    env:
+      GIT_USER_NAME: Eclipse Keypop Bot
+      GIT_USER_EMAIL: ${{ github.repository }}-bot@eclipse.org
     steps:
       - name: Checkout the repository
         uses: actions/checkout@v4
         with:
-          ref: gh-pages
-          submodules: recursive
+          ref: gh-pages-source
+          submodules: false
           fetch-depth: 0
 
       - name: Set Git user identity
         run: |
-          git config --global user.name "Eclipse Keypop Bot"
-          git config --global user.email "${{ github.repository }}-bot@eclipse.org"
+          git config --global user.name "${GIT_USER_NAME}"
+          git config --global user.email "${GIT_USER_EMAIL}"
 
-      - name: Update Git submodules
-        id: commit
+      - name: Fetch scripts from main branch
         run: |
-          git submodule update --init --recursive --remote
-          git add .
-          COMMIT_MSG="Update submodules to latest commit"
-          if [[ -n $(git status --porcelain) ]]; then
-            git commit -m "$COMMIT_MSG"
-            echo "changes_detected=true" >> $GITHUB_ENV
-          else
-            echo "No changes to commit"
-            echo "changes_detected=false" >> $GITHUB_ENV
-          fi
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          git fetch origin main
+          git checkout origin/main -- .github/scripts/update_and_publish.sh
 
-      - name: Show the version of the submodules
-        run: git submodule foreach --recursive 'git rev-parse HEAD'
+      - name: Make script executable
+        run: chmod +x .github/scripts/update_and_publish.sh
 
-      - name: Push changes if any
-        if: env.changes_detected == 'true'
-        run: |
-          git push origin HEAD:gh-pages
+      - name: Execute update and publish script
+        run: .github/scripts/update_and_publish.sh
         env:
+          GIT_USER_NAME: ${{ env.GIT_USER_NAME }}
+          GIT_USER_EMAIL: ${{ env.GIT_USER_EMAIL }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
