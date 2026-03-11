@@ -50,3 +50,7 @@
 	path = keypop-storagecard-java-api
 	url = https://github.com/eclipse-keypop/keypop-storagecard-java-api
 	branch = doc
+[submodule "keypop-genericcard-jvm-api"]
+	path = keypop-genericcard-jvm-api
+	url = https://github.com/eclipse-keypop/keypop-genericcard-jvm-api.git
+	branch = doc
