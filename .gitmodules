@@ -54,3 +54,7 @@
 	path = keypop-genericcard-jvm-api
 	url = https://github.com/eclipse-keypop/keypop-genericcard-jvm-api.git
 	branch = doc
+[submodule "keypop-genericcard-cpp-api"]
+	path = keypop-genericcard-cpp-api
+	url = https://github.com/eclipse-keypop/keypop-genericcard-cpp-api.git
+	branch = doc
