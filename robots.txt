@@ -1,4 +1,22 @@
+# Meant to be crawled: the home page, the page of each API and the whole
+# documentation of its latest stable version (<api>/latest-stable/).
+# Not meant to be crawled: the version directories (<api>/<version>/), which
+# duplicate latest-stable/ or document older releases and snapshots.
+# Version directories start with a digit, and robots.txt has no character class
+# (only * and $), hence one rule per leading digit. The longest matching rule
+# wins, so the Allow rule keeps every URL under latest-stable/ crawlable, even
+# one containing a path segment that starts with a digit.
 User-agent: *
-Allow: /
-Allow: /latest-stable/
-Disallow: /*/[0-9]*/
+Allow: /*/latest-stable/
+Disallow: /*/0
+Disallow: /*/1
+Disallow: /*/2
+Disallow: /*/3
+Disallow: /*/4
+Disallow: /*/5
+Disallow: /*/6
+Disallow: /*/7
+Disallow: /*/8
+Disallow: /*/9
+
+Sitemap: https://docs.keypop.org/sitemap.xml
