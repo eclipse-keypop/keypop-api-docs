@@ -60,7 +60,6 @@
     <tr>
       <th class="sortable" onclick="sortTable(0)">Component <span class="sort-icon"><i class="bi bi-arrow-down-up"></i></span></th>
       <th class="sortable" onclick="sortTable(1)">Type <span class="sort-icon"><i class="bi bi-arrow-down-up"></i></span></th>
-      <th class="sortable" onclick="sortTable(2)">Category <span class="sort-icon"><i class="bi bi-arrow-down-up"></i></span></th>
     </tr>
   </thead>
   <tbody>
@@ -71,10 +70,9 @@
       {% if parts.size > 1 %}
         {% assign subdir = parts[0] %}
         {% unless subdir == "" or subdir == "." or subdir == "assets" or seen_dirs contains subdir %}
-          {% comment %} Determine type and category {% endcomment %}
+          {% comment %} Determine the type: every Keypop component is an API, so there is no category to tell apart {% endcomment %}
           {% assign type = "other" %}
           {% assign type_badge = "secondary" %}
-          {% assign category = "unknown" %}
 
           {% if subdir contains "-java-" or subdir contains "-jvm-" %}
             {% assign type = "jvm" %}
@@ -87,12 +85,6 @@
             {% assign type_badge = "success" %}
           {% endif %}
 
-          {% if subdir contains "-api" %}
-            {% assign category = "API" %}
-          {% elsif subdir contains "-lib" %}
-            {% assign category = "Library" %}
-          {% endif %}
-
           <tr data-type="{{ type }}" data-name="{{ subdir | downcase }}">
             <td>
               <a href="{{ subdir | relative_url }}" class="component-link">{{ subdir }}</a>
@@ -100,7 +92,6 @@
             <td>
               <span class="badge bg-{{ type_badge }} text-uppercase">{{ type }}</span>
             </td>
-            <td>{{ category }}</td>
           </tr>
           {% assign seen_dirs = seen_dirs | push: subdir %}
         {% endunless %}
@@ -111,7 +102,7 @@
 
 <script>
   let currentFilter = 'all';
-  let sortDirection = [1, 1, 1]; // 1 for ascending, -1 for descending
+  let sortDirection = [1, 1]; // 1 for ascending, -1 for descending
 
   function filterByType(type) {
     currentFilter = type;
