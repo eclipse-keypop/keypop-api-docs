@@ -105,6 +105,13 @@
             color: #fff;
             font-weight: 700;
         }
+        /* The home page table is a Bootstrap one, and Bootstrap paints its cells through
+           `.table > :not(caption) > * > *`, which outweighs the rule above. This selector is one
+           element more specific, so the band is the same orange there as everywhere else. */
+        .table thead th {
+            background: #eb6608;
+            color: #fff;
+        }
         tr:hover {
             background: #f0f3f6;
         }

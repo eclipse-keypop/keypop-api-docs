@@ -57,7 +57,7 @@
 </div>
 
 <table class="table table-hover table-striped" id="repoTable">
-  <thead class="table-secondary">
+  <thead>
     <tr>
       <th class="sortable" onclick="sortTable(0)">Component <span class="sort-icon"><i class="bi bi-arrow-down-up"></i></span></th>
       <th class="sortable" onclick="sortTable(1)">Type <span class="sort-icon"><i class="bi bi-arrow-down-up"></i></span></th>
