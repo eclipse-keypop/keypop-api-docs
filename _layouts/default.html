@@ -81,28 +81,65 @@
             margin-right: 5px;
         }
         .repo-link a:hover {
-            color: #0366d6;
+            color: #eb6608;
             transition: color 0.2s;
         }
+        /* Tables follow the structure used on the Calypsonet documentation site: white ground,
+           1px #dedede grid, and a header band carrying white bold text. The hue is the orange of
+           the Keypop logo (#eb6608), not the blue of the CNA. */
         table {
-            background: #f6f8fa;
+            background: #fff;
             border-collapse: collapse;
             width: 100%;
-            margin: 20px 0;
+            margin-bottom: 1.25em;
         }
         td, th {
-            padding: 8px 12px;
-            border: 1px solid #e1e4e8;
+            padding: .5625em .625em;
+            border: 1px solid #dedede;
+            line-height: 1.6;
+            vertical-align: middle;
+            color: rgba(0, 0, 0, .8);
+        }
+        thead th {
+            background: #eb6608;
+            color: #fff;
+            font-weight: 700;
         }
         tr:hover {
             background: #f0f3f6;
         }
+        /* Version table of a library: one row per version, the version number being the link.
+           Sized by its content rather than stretched across the page, since it has one column. */
+        .doc-versions {
+            width: auto;
+        }
+        /* Same badges as the specification site, to the value. */
+        .doc-badge {
+            display: inline-block;
+            font-size: .72rem;
+            font-weight: 600;
+            padding: 2px 8px;
+            border-radius: 10px;
+            vertical-align: middle;
+        }
+        .doc-badge--stable {
+            background: #dafbe1;
+            color: #1a7f37;
+        }
+        .doc-badge--snapshot {
+            background: #fff8c5;
+            color: #9a6700;
+        }
         a {
-            color: #0366d6;
+            color: #eb6608;
             text-decoration: none;
             transition: all 0.2s;
         }
-        a:hover {
+        /* The colour is restated here: without it the theme would repaint the link blue on
+           hover, since its own rule targets a:hover and a:focus. */
+        a:hover,
+        a:focus {
+            color: #eb6608;
             text-decoration: underline;
             font-weight: normal;
         }
