@@ -18,12 +18,11 @@
   .table-hover tbody tr {
     cursor: pointer;
   }
+  /* The pointer cursor is the affordance that says the header sorts the table; it needs no
+     colour change on top, which would punch a grey hole in the coloured band. */
   .sortable {
     cursor: pointer;
     user-select: none;
-  }
-  .sortable:hover {
-    background: #e9ecef;
   }
   .sort-icon {
     font-size: 0.8em;

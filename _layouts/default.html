@@ -112,7 +112,9 @@
             background: #eb6608;
             color: #fff;
         }
-        tr:hover {
+        /* Body rows only: a header row is not a row of data, and highlighting it would fight
+           the coloured band. */
+        tbody tr:hover {
             background: #f0f3f6;
         }
         /* Version table of a library: one row per version, the version number being the link.
