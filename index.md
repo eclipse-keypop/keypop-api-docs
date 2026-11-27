@@ -46,6 +46,9 @@
       <button class="btn btn-sm btn-outline-primary btn-filter" data-filter="cpp" onclick="filterByType('cpp')">
         <i class="bi bi-code-slash"></i> C++
       </button>
+      <button class="btn btn-sm btn-outline-success btn-filter" data-filter="kmp" onclick="filterByType('kmp')">
+        <i class="bi bi-phone"></i> KMP
+      </button>
     </div>
     <div class="col">
       <input type="text" class="form-control search-box" id="searchBox" placeholder="🔍 Search by name..." onkeyup="filterBySearch()">
@@ -80,6 +83,9 @@
           {% elsif subdir contains "-cpp-" %}
             {% assign type = "cpp" %}
             {% assign type_badge = "primary" %}
+          {% elsif subdir contains "kmp" %}
+            {% assign type = "kmp" %}
+            {% assign type_badge = "success" %}
           {% endif %}
 
           {% if subdir contains "-api" %}
@@ -120,12 +126,14 @@
         if (type === 'all') btn.className = 'btn btn-sm btn-dark btn-filter';
         else if (type === 'jvm') btn.className = 'btn btn-sm btn-danger btn-filter';
         else if (type === 'cpp') btn.className = 'btn btn-sm btn-primary btn-filter';
+        else if (type === 'kmp') btn.className = 'btn btn-sm btn-success btn-filter';
       } else {
         const filterType = btn.getAttribute('data-filter');
         btn.classList.remove('btn-dark', 'btn-danger', 'btn-primary', 'btn-success', 'btn-warning');
         if (filterType === 'all') btn.className = 'btn btn-sm btn-outline-dark btn-filter';
         else if (filterType === 'jvm') btn.className = 'btn btn-sm btn-outline-danger btn-filter';
         else if (filterType === 'cpp') btn.className = 'btn btn-sm btn-outline-primary btn-filter';
+        else if (filterType === 'kmp') btn.className = 'btn btn-sm btn-outline-success btn-filter';
       }
     });
   }

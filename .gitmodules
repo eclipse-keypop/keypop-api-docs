@@ -58,3 +58,7 @@
 	path = keypop-genericcard-cpp-api
 	url = https://github.com/eclipse-keypop/keypop-genericcard-cpp-api.git
 	branch = doc
+[submodule "keypop-reader-definitions-kmp-api"]
+	path = keypop-reader-definitions-kmp-api
+	url = https://github.com/eclipse-keypop/keypop-reader-definitions-kmp-api.git
+	branch = doc
