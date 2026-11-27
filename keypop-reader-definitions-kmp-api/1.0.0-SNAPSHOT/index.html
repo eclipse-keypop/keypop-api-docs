@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>Keypop Reader Definitions KMP API</title>
+    <link href="images/logo-icon.svg" rel="icon" type="image/svg">
+        <script>var pathToRoot = "";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="scripts/sourceset_dependencies.js" async="async"></script>
+<link href="styles/style.css" rel="Stylesheet">
+<link href="styles/main.css" rel="Stylesheet">
+<link href="styles/prism.css" rel="Stylesheet">
+<link href="styles/logo-styles.css" rel="Stylesheet">
+<link href="ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="ui-kit/ui-kit.min.js" defer="defer"></script>
+<link href="images/logo-icon.svg">
+<link href="styles/keypop-logo.css" rel="Stylesheet">
+</head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+            <a class="library-name--link" href="index.html" tabindex="1">
+                    Keypop Reader Definitions KMP API
+            </a>
+        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle"
+                type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+1.0.0-SNAPSHOT        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector common-like" data-active="" aria-pressed="true"
+                        data-filter=":/commonMain">common</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox"
+                        data-role="dropdown-toggle"
+                        aria-controls="platform-tags-listbox"
+                        aria-haspopup="listbox"
+                        aria-expanded="false"
+                        aria-label="Toggle source sets"
+                ></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option common-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":/commonMain"
+                                       data-filter=":/commonMain"/>
+                                <span class="checkbox--icon"></span>
+                                common
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+                <a target="_blank" rel="noopener noreferrer" class="navigation-controls--btn navigation-controls--btn_homepage" id="homepage-link"
+                   href="https://keypop.org/"></a>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button"
+                    type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config='{"defaultSize": 280, "minSize": 200, "maxSize": 400}'>
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list"
+                    data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    Keypop Reader Definitions KMP API
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" id="content" pageIds="Keypop Reader Definitions KMP API::////PointingToDeclaration//1558683979">
+  <div class="breadcrumbs"></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Keypop</span></span> <span><span>Reader</span></span> <span><span>Definitions</span></span> <span><span>KMP</span></span> <span><span>API</span></span></h1>
+    <div class="platform-hinted UnderCoverText" data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/commonMain"><p class="paragraph">Kotlin Multiplatform transcription of the <strong>Terminal Reader Definitions API</strong> specification proposed by the <a target="_blank" rel="noopener noreferrer" href="https://calypsonet.org/">Calypso Networks Association</a>, part of the <a target="_blank" rel="noopener noreferrer" href="https://keypop.org/">Keypop</a> open-source project hosted by the <a target="_blank" rel="noopener noreferrer" href="https://www.eclipse.org/">Eclipse Foundation</a>.</p><p class="paragraph">This API is a foundation one: it defines the RF technologies a contactless reader can activate during polling, and the card types a reader reports after detection. It declares no behaviour and carries no platform-specific code — everything lives in the common source set.</p><p class="paragraph"><img alt="Class diagram" src="class-diagram.svg"></p><h2 class="">Reading this documentation</h2><p class="paragraph">Each type carries a link to its <strong>normative definition</strong> in the specification, and nothing more. The descriptions are deliberately not duplicated here: the specification is the reference, and a copy would age silently as the specification is corrected.</p><p class="paragraph">Those links target the <code class="lang-kotlin">latest-1.0</code> alias of the published specification, which always resolves to the latest patch of that minor version: this library and the specification share their major and minor version, each advancing its own patch level.</p><ul><li><p class="paragraph"><a target="_blank" rel="noopener noreferrer" href="https://docs.terminal-api.calypsonet.org/reader-definitions/latest-1.0/">Specification of the Terminal Reader Definitions API</a></p></li><li><p class="paragraph"><a target="_blank" rel="noopener noreferrer" href="https://docs.terminal-api.calypsonet.org/">All Terminal API specifications</a></p></li></ul><h2 class="">Platforms</h2><p class="paragraph">Published for the <strong>JVM</strong> — which also serves Android, the artifact being a Java 8 jar — and for <strong>iOS</strong> (<code class="lang-kotlin">iosArm64</code>, <code class="lang-kotlin">iosSimulatorArm64</code>, <code class="lang-kotlin">iosX64</code>).</p></div></div>
+  </div>
+  <h2 class="">Packages</h2>
+  <div class="table"><a data-name="-1159415774%2FPackages%2F1558683979" anchor-label="org.eclipse.keypop.reader.definitions" id="-1159415774%2FPackages%2F1558683979" data-filterable-set=":/commonMain"></a>
+    <div class="table-row table-row_platform-tagged" data-filterable-current=":/commonMain" data-filterable-set=":/commonMain">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="-keypop -reader -definitions -k-m-p -a-p-i/org.eclipse.keypop.reader.definitions/index.html">org.eclipse.keypop.reader.definitions</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1159415774%2FPackages%2F1558683979"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right platform-tags--wrapper">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag common-like">common</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a target="_blank" rel="noopener noreferrer" class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>Copyright &copy; Calypso Networks Association. All Rights Reserved.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

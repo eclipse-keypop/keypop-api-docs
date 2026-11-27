@@ -1,0 +1,59 @@
+/*
+ * Copyright (c) 2026 Calypso Networks Association https://calypsonet.org/
+ *
+ * See the NOTICE file(s) distributed with this work for additional information
+ * regarding copyright ownership.
+ *
+ * This program and the accompanying materials are made available under the terms of the
+ * MIT License which is available at https://opensource.org/licenses/MIT
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+/*
+ * This sheet must NOT be named logo-styles.css: custom style sheets are copied into the same
+ * styles/ directory as the ones Dokka generates, and that name is taken by the sheet declaring
+ * --dokka-logo-image-url. Overwriting it removes the logo altogether.
+ */
+
+/*
+ * The logo of the header.
+ *
+ * Proportions: the Keypop logo is a banner, roughly 2.85:1, whereas Dokka reserves a 28x28 square
+ * and derives `background-size` from its own two variables -- in which the width slot is fed by
+ * `--dokka-logo-height` and the height slot by `--dokka-logo-width`. Overriding the variables alone
+ * therefore distorts the image, so the rule is restated here, within the limits Dokka imposes on
+ * that box: max-width 120px, max-height 36px.
+ *
+ * Contrast: the artwork is dark, drawn for a light background, and the Dokka header is dark. It is
+ * therefore given a white plate, as the Javadoc of the Keypop Java APIs does inline. The plate is
+ * padded on all four sides so that it reads as a plate and not as a tight crop; `max-height` and
+ * `max-width`, which Dokka caps at 36px and 120px, are lifted so that the padding does not have to
+ * be taken out of the artwork.
+ *
+ * `background-origin` matters here: it defaults to `padding-box`, so `contain` would fit the
+ * artwork to the plate including its padding -- which cancels the padding on the axis that
+ * constrains the fit. Set to `content-box`, the artwork is fitted to the content box and the
+ * padding is real on all four sides.
+ */
+.library-name--link:before {
+  background-size: contain;
+  background-origin: content-box;
+  background-color: #ffffff;
+  width: 74px;
+  height: 26px;
+  padding: 8px 10px;
+  max-width: none;
+  max-height: none;
+  border-radius: 3px;
+}
+
+/*
+ * Figures of the module documentation -- the class diagram is the only one -- are centred. Dokka
+ * renders the Markdown of `docs/Module.md` as plain paragraphs, which left the diagram flush left.
+ */
+.paragraph > img {
+  display: block;
+  margin-inline: auto;
+  max-width: 100%;
+}

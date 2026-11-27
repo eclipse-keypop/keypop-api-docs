@@ -1,0 +1,12 @@
+theme: jekyll-theme-minimal
+title: Keypop API Documentation
+url: "https://docs.keypop.org"
+plugins:
+  - jekyll-sitemap
+defaults:
+  - scope:
+      path: "*/[0-9]*"
+    values:
+      sitemap: false
+include:
+  - "_*.html"
